@@ -1,0 +1,16 @@
+numbers = list(map(float, input("Enter numbers separated by space: ").split()))
+mean_value = mean(numbers)
+median_value = median(numbers)
+try:
+    mode_value = mode(numbers)
+except:
+    mode_value = "No unique mode found"
+
+print(f"Mean: {mean_value}")
+print(f"Median: {median_value}")
+print(f"Mode: {mode_value}")
+if isinstance(mode_value, (int, float)):
+    average_of_all = (mean_value + median_value + mode_value) / 3
+    print(f"Average of mean, median, and mode: {average_of_all}")
+else:
+    print("Cannot calculate average of mean, median, and mode because mode is not unique.")
