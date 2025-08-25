@@ -1,0 +1,5 @@
+num = int(input("Enter the number to display its multiplication table: "))
+limit = int(input("Enter the range (up to which multiple): "))
+print(f"\nMultiplication Table for {num}:\n")
+for i in range(1, limit + 1):
+    print(f"{num} x {i} = {num * i}")
